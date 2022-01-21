@@ -49,9 +49,6 @@ export class MoviesComponent implements OnInit {
     }
   }
 
-  // addMovie(movie: Movie){
-  //   this.movieService.addMovie(movie).subscribe((movie) => (this.movies.push(movie)));
-  // }
 
   editMovie(movie : Movie){
     const index = this.movies.indexOf(movie)
@@ -62,11 +59,12 @@ export class MoviesComponent implements OnInit {
     dialogRef.afterClosed().subscribe((result)=>{
       if(result){
         this.movieService.updateMovie(result).subscribe((movie) => this.movies[index] = movie);
-        // this.toDelete = this.screens.filter((screen) => (screen.movieName == movieName));
-        // for(var screen in this.toDelete){
-        //   this.toDelete[screen].movieName = 
-        //   this.screenService
-        // }
+        this.toDelete = this.screens.filter((screen) => (screen.movieName == movieName));
+        for(var screen in this.toDelete){
+          console.log("MOVIE NAME: " + this.toDelete[screen].movieName)
+          this.toDelete[screen].movieName = result.name
+          this.screenService.updateScreen(this.toDelete[screen]).subscribe()
+        }
       }
     })
   }
