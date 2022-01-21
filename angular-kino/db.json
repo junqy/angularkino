@@ -1,0 +1,85 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "name": "Dzidzia Początek",
+      "duration": "75"
+    },
+    {
+      "id": 2,
+      "name": "Kubus Puchatek",
+      "duration": "120"
+    },
+    {
+      "id": 3,
+      "name": "Creed",
+      "duration": "115"
+    },
+    {
+      "name": "Spiderman: No Way Home",
+      "duration": "150",
+      "id": 4
+    },
+    {
+      "name": "Avengers: Endgame",
+      "duration": "180",
+      "id": 6
+    },
+    {
+      "name": "GoodFellas",
+      "duration": "180",
+      "id": 7
+    }
+  ],
+  "rooms": [
+    {
+      "id": 1,
+      "name": "Sala 1",
+      "capacity": 200
+    },
+    {
+      "id": 2,
+      "name": "Sala 2",
+      "capacity": 120
+    },
+    {
+      "id": 3,
+      "name": "Sala 3",
+      "capacity": 60
+    }
+  ],
+  "screens": [
+    {
+      "id": 1,
+      "movieName": "Spiderman: No Way Home",
+      "date": "2022-02-18T00:50",
+      "roomId": 1,
+      "seats": 200,
+      "taken_seats": 0
+    },
+    {
+      "id": 2,
+      "movieName": "Avengers: Endgame",
+      "date": "2022-01-29T21:50",
+      "roomId": 2,
+      "seats": 120,
+      "taken_seats": 0
+    },
+    {
+      "id": 3,
+      "movieName": "Kubus Puchatek",
+      "date": "2022-01-26T00:53",
+      "roomId": 3,
+      "seats": 60,
+      "taken_seats": 0
+    },
+    {
+      "movieName": "Creed",
+      "date": "2022-03-05T13:41",
+      "taken_seats": 0,
+      "id": 4,
+      "roomId": 2,
+      "seats": 120
+    }
+  ]
+}

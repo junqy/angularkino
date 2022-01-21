@@ -1,0 +1,11 @@
+<header>
+    <h1>Screens List</h1>
+    <button color="primary" mat-flat-button (click)="addScreen()">Add</button>
+</header>
+<app-screen-item
+*ngFor="let screen of screens"
+[screen]="screen"
+(onDeleteScreen)="deleteScreen(screen)"
+(onEditScreen)="editScreen(screen)"
+>
+</app-screen-item>

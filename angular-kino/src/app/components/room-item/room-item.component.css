@@ -1,0 +1,20 @@
+
+.room{
+    background: #3F51B5;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.room h3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color:aliceblue;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif; 
+}
+
+.room p{
+    color:aliceblue;
+}

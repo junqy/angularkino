@@ -1,0 +1,10 @@
+<header>
+    <h1>Movies List</h1>
+    <button color="primary" mat-flat-button (click)="addMovie()">Add</button>
+</header>
+<app-movie-item 
+*ngFor="let movie of movies" 
+[movie]="movie" 
+(onDeleteMovie)="deleteMovie(movie)"
+(onEditMovie)="editMovie(movie)">
+</app-movie-item>

@@ -1,0 +1,32 @@
+.movie{
+    background: #3F51B5;
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.movie h3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color:aliceblue;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif; 
+}
+
+.movie p{
+    color:aliceblue;
+}
+
+mat-icon{
+    cursor: pointer;
+    margin-left: 10px;
+    background-color: #8290df;
+    padding: 7px 10px;
+    border-radius: 5px;
+}
+
+mat-icon:hover{
+    background-color: #363e6b;
+}
+

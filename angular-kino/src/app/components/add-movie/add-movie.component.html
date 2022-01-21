@@ -1,0 +1,16 @@
+<form class="on-add"(ngSubmit)="onSubmit()">
+    <h1>Add Movie</h1>
+    <div class="form-control">
+        <mat-form-field appearance="fill" [style.width.px]=350>
+            <mat-label>Movie Title</mat-label>
+            <input matInput type="text" name="name" [(ngModel)]="movieObj.name" id="name" placeholder="Ex. Goodfellas">
+        </mat-form-field>
+    </div>
+    <div class="form-control">
+        <mat-form-field appearance="fill" [style.width.px]=350>
+            <mat-label>Movie Duration</mat-label>
+            <input matInput type="text" name="duration" [(ngModel)]="movieObj.duration" id="duration" placeholder="Ex. 120">
+        </mat-form-field>
+    </div>
+    <input type="submit" value="Save Movie" class="btn btn-block"/>
+</form>
