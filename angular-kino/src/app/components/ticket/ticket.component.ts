@@ -16,6 +16,7 @@ export class TicketComponent implements OnInit {
 
   ngOnInit(): void {
     this.seats = [...Array(this.screen.seats).keys()].map(x => ++x);
+    console.log(this.seats)
     this.seats = this.seats.filter((x : number) => !this.screen.taken_seats.includes(x))
   }
 

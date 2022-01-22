@@ -4,8 +4,6 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Movie } from 'src/app/Movie';
 import { Room } from 'src/app/Room';
 import { Screen } from 'src/app/Screen';
-import { MovieService } from 'src/app/services/movie.service';
-import { RoomService } from 'src/app/services/room.service';
 
 @Component({
   selector: 'app-edit-screen',
@@ -13,17 +11,13 @@ import { RoomService } from 'src/app/services/room.service';
   styleUrls: ['./edit-screen.component.css']
 })
 export class EditScreenComponent implements OnInit {
-  movies: Movie[] = []
-  rooms: Room[] = []
 
-  constructor(private movieService: MovieService, 
-    private roomService: RoomService,
+  constructor(
     public dialogRef: MatDialogRef<EditScreenComponent>,
-    @Inject(MAT_DIALOG_DATA) public screen: Screen) { }
+    @Inject(MAT_DIALOG_DATA) public data: {screen: Screen, movies: Movie[], rooms: Room[]}) { }
 
   ngOnInit(): void {
-    this.movieService.getMovies().subscribe((movies) => (this.movies = movies));
-    this.roomService.getRooms().subscribe((rooms) => (this.rooms = rooms));
+    console.log(this.data.rooms)
   }
 
   onSubmit(form: NgForm){
@@ -31,13 +25,17 @@ export class EditScreenComponent implements OnInit {
       alert('Please select a room!');
       return;
     }
-    this.screen.movieName = form.value.movieName
-    this.screen.date = form.value.date
-    this.screen.roomId = form.value.room.id
-    this.screen.seats = form.value.room.capacity
-    this.screen.taken_seats = []
+    console.log('room:' + form.value.room)
+    console.log('movie:' + form.value.movieName)
+    console.log('date:' + form.value.date)
+
+    this.data.screen.movieName = form.value.movieName
+    this.data.screen.date = form.value.date
+    this.data.screen.roomId = form.value.room.id
+    this.data.screen.seats = form.value.room.capacity
+    this.data.screen.taken_seats = []
     
-    this.dialogRef.close(this.screen)
+    this.dialogRef.close(this.data.screen)
   }
   
 }

@@ -3,8 +3,6 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Movie } from 'src/app/Movie';
 import { Room } from 'src/app/Room';
 import { Screen } from 'src/app/Screen';
-import { MovieService } from 'src/app/services/movie.service';
-import { RoomService } from 'src/app/services/room.service';
 
 @Component({
   selector: 'app-add-screen',
@@ -14,18 +12,14 @@ import { RoomService } from 'src/app/services/room.service';
 export class AddScreenComponent implements OnInit {
   @Output() onAddScreen: EventEmitter<Screen> = new EventEmitter();
 
-  movies: Movie[] = [];
-  rooms: Room[] = [];
   selectedMovie!: string;
   selectedRoom!: Room;
   selectedDate!: string;
 
-  constructor(private movieService: MovieService, private roomService: RoomService,
-    public dialogRef: MatDialogRef<AddScreenComponent>, @Inject(MAT_DIALOG_DATA) public data: any ) { }
+  constructor(public dialogRef: MatDialogRef<AddScreenComponent>, 
+    @Inject(MAT_DIALOG_DATA) public data: {rooms: Room[], movies: Movie[]} ) { }
 
   ngOnInit(): void {
-    this.movieService.getMovies().subscribe((movies) => (this.movies = movies));
-    this.roomService.getRooms().subscribe((rooms) => (this.rooms = rooms));
   }
 
   onSubmit(){

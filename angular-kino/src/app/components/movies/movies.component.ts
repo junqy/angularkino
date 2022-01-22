@@ -6,6 +6,7 @@ import { AddMovieComponent } from '../add-movie/add-movie.component';
 import { EditMovieComponent } from '../edit-movie/edit-movie.component';
 import { ScreenService } from 'src/app/services/screen.service';
 import { Screen } from 'src/app/Screen';
+import { PopularityComponent } from '../popularity/popularity.component';
 
 
 @Component({
@@ -67,5 +68,9 @@ export class MoviesComponent implements OnInit {
         }
       }
     })
+  }
+
+  popularityMovie(movie: Movie){
+    const dialogRef = this.dialog.open(PopularityComponent, {data: {movie, screens: this.screens}});
   }
 }

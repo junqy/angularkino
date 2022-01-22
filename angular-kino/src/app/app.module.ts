@@ -29,6 +29,7 @@ import { ScreenItemComponent } from './components/screen-item/screen-item.compon
 import { AddScreenComponent } from './components/add-screen/add-screen.component';
 import { EditScreenComponent } from './components/edit-screen/edit-screen.component';
 import { TicketComponent } from './components/ticket/ticket.component';
+import { PopularityComponent } from './components/popularity/popularity.component';
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -54,7 +55,8 @@ const appRoutes: Routes = [
     ScreenItemComponent,
     AddScreenComponent,
     EditScreenComponent,
-    TicketComponent
+    TicketComponent,
+    PopularityComponent
   ],
   imports: [
     BrowserModule,

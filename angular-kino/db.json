@@ -57,10 +57,14 @@
     {
       "id": 1,
       "movieName": "Spiderman: No Way Home",
-      "date": "2022-02-18T00:50",
-      "roomId": 1,
-      "seats": 200,
-      "taken_seats": []
+      "date": "2022-02-26T00:54",
+      "roomId": 3,
+      "seats": 60,
+      "taken_seats": [
+        4,
+        2,
+        3
+      ]
     },
     {
       "id": 2,
@@ -89,7 +93,10 @@
         4,
         6,
         9,
-        5
+        5,
+        8,
+        12,
+        18
       ]
     },
     {
@@ -126,6 +133,14 @@
         2
       ],
       "id": 7
+    },
+    {
+      "movieName": "Avengers: Endgame",
+      "date": "2022-01-30T00:07",
+      "roomId": 3,
+      "seats": 60,
+      "taken_seats": [],
+      "id": 8
     }
   ]
 }

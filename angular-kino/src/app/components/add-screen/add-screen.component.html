@@ -4,7 +4,7 @@
         <mat-form-field appearance="fill" [style.width.px]=350>
             <mat-label>Movie</mat-label>
             <mat-select [(ngModel)]="selectedMovie" name="selectedMovie">
-              <mat-option *ngFor="let movie of movies" [value]="movie.name">
+              <mat-option *ngFor="let movie of data.movies" [value]="movie.name">
                 {{movie.name}}
               </mat-option>
             </mat-select>
@@ -20,7 +20,7 @@
           <mat-form-field appearance="fill" [style.width.px]=350>
             <mat-label>Room</mat-label>
             <mat-select [(ngModel)]="selectedRoom" name="selectedRoom">
-              <mat-option *ngFor="let room of rooms" [value]="room">
+              <mat-option *ngFor="let room of data.rooms" [value]="room">
                 {{room.id}}
               </mat-option>
             </mat-select>

@@ -1,0 +1,7 @@
+<h1>Popularity</h1>
+<div class="popularity-container">
+    <mat-label>{{data.movie.name}}</mat-label>
+    <p *ngFor="let scr of popularity">
+    Date: {{scr.date}} Tickets Sold: {{scr.taken_seats.length}}
+    </p> 
+</div>
