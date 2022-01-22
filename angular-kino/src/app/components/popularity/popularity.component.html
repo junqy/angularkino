@@ -1,7 +1,14 @@
 <h1>Popularity</h1>
+<canvas baseChart 
+[datasets]="barChartData"
+[labels]="barChartLabels"
+[options]="barChartOptions"
+[plugins]="barChartPlugins"
+[legend]="barChartLegend">
+</canvas>
 <div class="popularity-container">
-    <mat-label>{{data.movie.name}}</mat-label>
+    <h2>{{data.movie.name}}</h2>
     <p *ngFor="let scr of popularity">
-    Date: {{scr.date}} Tickets Sold: {{scr.taken_seats.length}}
+    Date: {{scr.date.split("T").join(" ")}} Tickets Sold: {{scr.taken_seats.length}}
     </p> 
 </div>

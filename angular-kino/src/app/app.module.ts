@@ -12,6 +12,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { NgChartsModule } from 'ng2-charts';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -30,6 +31,7 @@ import { AddScreenComponent } from './components/add-screen/add-screen.component
 import { EditScreenComponent } from './components/edit-screen/edit-screen.component';
 import { TicketComponent } from './components/ticket/ticket.component';
 import { PopularityComponent } from './components/popularity/popularity.component';
+
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
@@ -71,7 +73,8 @@ const appRoutes: Routes = [
     FormsModule,
     MatSelectModule,
     MatDatepickerModule,
-    RouterModule.forRoot(appRoutes, {enableTracing: true})
+    RouterModule.forRoot(appRoutes, {enableTracing: true}),
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

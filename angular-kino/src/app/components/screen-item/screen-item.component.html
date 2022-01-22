@@ -4,6 +4,6 @@
         <mat-icon (click)="onDelete(screen)">delete</mat-icon>
         <mat-icon (click)="onBuy(screen)">shopping_cart</mat-icon>
     </div></h3>
-    <p>Date: {{screen.date}} Room: {{screen.roomId}} </p>
+    <p>Date: {{screen.date.split("T").join(" ")}} Room: {{screen.roomId}} </p>
     <p>Seats: {{screen.seats}} Taken Seats: {{screen.taken_seats.length}}</p>
 </div>
