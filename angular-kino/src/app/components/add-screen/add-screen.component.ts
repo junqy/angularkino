@@ -32,6 +32,9 @@ export class AddScreenComponent implements OnInit {
     }else if(!this.selectedRoom){
       alert('Please choose a room!');
       return;
+    }else if(Date.parse(this.selectedDate) <= new Date().getTime()){
+      alert('Date lower than today!')
+      return;
     }
 
     const newScreen = {

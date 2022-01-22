@@ -141,6 +141,22 @@
       "seats": 60,
       "taken_seats": [],
       "id": 8
+    },
+    {
+      "movieName": "Creed",
+      "date": "2022-02-05T21:18",
+      "roomId": 3,
+      "seats": 60,
+      "taken_seats": [],
+      "id": 9
+    },
+    {
+      "movieName": "Creed",
+      "date": "2022-01-30T21:21",
+      "roomId": 3,
+      "seats": 60,
+      "taken_seats": [],
+      "id": 10
     }
   ]
 }

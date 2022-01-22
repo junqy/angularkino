@@ -24,7 +24,11 @@ export class EditScreenComponent implements OnInit {
     if(!form.value.room.id){
       alert('Please select a room!');
       return;
+    }else if(Date.parse(form.value.date) <= new Date().getTime()){
+    alert('Date lower than today!')
+    return;
     }
+    
     console.log('room:' + form.value.room)
     console.log('movie:' + form.value.movieName)
     console.log('date:' + form.value.date)
