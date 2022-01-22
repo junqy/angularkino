@@ -35,7 +35,7 @@ export class EditScreenComponent implements OnInit {
     this.screen.date = form.value.date
     this.screen.roomId = form.value.room.id
     this.screen.seats = form.value.room.capacity
-    this.screen.taken_seats = 0
+    this.screen.taken_seats = []
     
     this.dialogRef.close(this.screen)
   }

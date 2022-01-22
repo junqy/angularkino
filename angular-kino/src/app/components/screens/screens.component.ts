@@ -4,6 +4,7 @@ import { Screen } from 'src/app/Screen';
 import { MatDialog } from '@angular/material/dialog';
 import { AddScreenComponent } from '../add-screen/add-screen.component';
 import { EditScreenComponent } from '../edit-screen/edit-screen.component';
+import { TicketComponent } from '../ticket/ticket.component';
 
 @Component({
   selector: 'app-screens',
@@ -46,4 +47,17 @@ export class ScreensComponent implements OnInit {
       }
     })
   }
+
+  buyScreen(screen : Screen){
+    const index = this.screens.indexOf(screen)
+    const dialogRef = this.dialog.open(TicketComponent, 
+      {data:screen});
+
+    dialogRef.afterClosed().subscribe((result) => {
+      if(result){
+        this.screenService.updateScreen(result).subscribe((screen) => this.screens[index] = screen)
+      }
+    })
+  }
+  
 }

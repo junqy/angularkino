@@ -1,0 +1,15 @@
+<form class="on-add" #form="ngForm" (ngSubmit)="onSubmit(form)">
+    <h1>Buy Ticket</h1>
+    <div class="form-control">
+        <mat-label>{{screen.movieName}}</mat-label>
+        <mat-form-field appearance="fill" [style.width.px]=350>
+            <mat-label>Seat</mat-label>
+            <mat-select [ngModel]="" id="seat" name="seat">
+              <mat-option *ngFor="let seat of seats" [value]="seat">
+                {{seat}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+    </div>
+    <input type="submit" value="Save Screen" class="btn btn-block"/>
+</form>

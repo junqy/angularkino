@@ -1,7 +1,7 @@
 <form class="on-add"(ngSubmit)="onSubmit()">
     <h1>Add Screen</h1>
     <div class="form-control">
-        <mat-form-field appearance="fill">
+        <mat-form-field appearance="fill" [style.width.px]=350>
             <mat-label>Movie</mat-label>
             <mat-select [(ngModel)]="selectedMovie" name="selectedMovie">
               <mat-option *ngFor="let movie of movies" [value]="movie.name">
@@ -11,13 +11,13 @@
           </mat-form-field>
     </div>
     <div class="form-control">
-        <mat-form-field>
+        <mat-form-field [style.width.px]=350>
             <input matInput [(ngModel)]="selectedDate" name="selectedDate" 
             type="datetime-local" placeholder="Date">
           </mat-form-field>
     </div>
     <div class="form-control">
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="fill" [style.width.px]=350>
             <mat-label>Room</mat-label>
             <mat-select [(ngModel)]="selectedRoom" name="selectedRoom">
               <mat-option *ngFor="let room of rooms" [value]="room">

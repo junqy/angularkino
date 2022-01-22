@@ -10,6 +10,7 @@ export class ScreenItemComponent implements OnInit {
   @Input() screen!: Screen;
   @Output() onDeleteScreen: EventEmitter<Screen> = new EventEmitter();
   @Output() onEditScreen: EventEmitter<Screen> = new EventEmitter();
+  @Output() onBuyScreen: EventEmitter<Screen> = new EventEmitter();
 
   constructor() { }
 
@@ -22,6 +23,10 @@ export class ScreenItemComponent implements OnInit {
 
   onEdit(screen : any){
     this.onEditScreen.emit(screen);
+  }
+
+  onBuy(screen : any){
+    this.onBuyScreen.emit(screen);
   }
 
 }

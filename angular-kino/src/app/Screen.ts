@@ -4,5 +4,5 @@ export interface Screen {
     date: string;
     roomId: number;
     seats: number;
-    taken_seats: number;
+    taken_seats: number[];
 }

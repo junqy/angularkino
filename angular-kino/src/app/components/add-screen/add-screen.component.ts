@@ -45,7 +45,7 @@ export class AddScreenComponent implements OnInit {
       date: this.selectedDate,
       roomId: this.selectedRoom.id,
       seats: this.selectedRoom.capacity,
-      taken_seats: 0    
+      taken_seats: []    
     }
 
     this.onAddScreen.emit(newScreen);

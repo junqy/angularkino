@@ -45,7 +45,7 @@ export class MoviesComponent implements OnInit {
     this.movieService.deleteMovie(movie).subscribe(() => (this.movies = this.movies.filter((m) => m.id !== movie.id)));
     this.toDelete = this.screens.filter((screen) => (screen.movieName == movie.name));
     for(var screen in this.toDelete){
-      this.screenService.deleteScreen(this.toDelete[screen]).subscribe()
+      this.screenService.deleteScreen(this.toDelete[screen])
     }
   }
 

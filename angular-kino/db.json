@@ -46,6 +46,11 @@
       "id": 3,
       "name": "Sala 3",
       "capacity": 60
+    },
+    {
+      "id": 4,
+      "name": "Sala 4",
+      "capacity": 2
     }
   ],
   "screens": [
@@ -55,7 +60,7 @@
       "date": "2022-02-18T00:50",
       "roomId": 1,
       "seats": 200,
-      "taken_seats": 0
+      "taken_seats": []
     },
     {
       "id": 2,
@@ -63,7 +68,13 @@
       "date": "2022-01-29T21:50",
       "roomId": 2,
       "seats": 120,
-      "taken_seats": 0
+      "taken_seats": [
+        1,
+        5,
+        3,
+        8,
+        4
+      ]
     },
     {
       "id": 3,
@@ -71,12 +82,20 @@
       "date": "2022-01-26T00:53",
       "roomId": 3,
       "seats": 60,
-      "taken_seats": 0
+      "taken_seats": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        9,
+        5
+      ]
     },
     {
       "movieName": "Creed",
       "date": "2022-03-05T13:41",
-      "taken_seats": 0,
+      "taken_seats": [],
       "id": 4,
       "roomId": 2,
       "seats": 120
@@ -86,7 +105,7 @@
       "date": "2022-01-28T16:54",
       "roomId": 2,
       "seats": 120,
-      "taken_seats": 0,
+      "taken_seats": [],
       "id": 5
     },
     {
@@ -94,8 +113,19 @@
       "date": "2022-02-02T20:54",
       "roomId": 1,
       "seats": 200,
-      "taken_seats": 0,
+      "taken_seats": [],
       "id": 6
+    },
+    {
+      "movieName": "Creed",
+      "date": "2022-01-22T18:18",
+      "roomId": 4,
+      "seats": 2,
+      "taken_seats": [
+        1,
+        2
+      ],
+      "id": 7
     }
   ]
 }
