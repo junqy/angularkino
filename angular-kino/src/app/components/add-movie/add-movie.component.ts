@@ -22,11 +22,28 @@ export class AddMovieComponent implements OnInit {
   }
 
   onSubmit(){
+    var duration: number = +this.movieObj.duration;
     if(!this.movieObj.name){
       alert('Please add a title!');
       return;
-    }else if(!this.movieObj.duration){
+    }if(!this.movieObj.duration){
       alert('Please add a duration!');
+      return;
+    }
+    else if(duration < 30){
+      alert('Duration must be more than 30')
+      return;
+    }
+    else if(duration > 300){
+      alert('Duration must be less than 300')
+      return;
+    }
+    else if(this.movieObj.name.length <= 1){
+      alert('Name can not be less than 1 character')
+      return;
+    }
+    else if(this.movieObj.name.charAt(0) !== this.movieObj.name.charAt(0).toUpperCase()){
+      alert('First letter needs to be in upper case or a number.')
       return;
     }
 

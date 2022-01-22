@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { NgChartsModule } from 'ng2-charts';
+import { MatNativeDateModule } from '@angular/material/core';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -74,7 +75,8 @@ const appRoutes: Routes = [
     MatSelectModule,
     MatDatepickerModule,
     RouterModule.forRoot(appRoutes, {enableTracing: true}),
-    NgChartsModule
+    NgChartsModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

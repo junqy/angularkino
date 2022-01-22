@@ -19,7 +19,6 @@ export class PopularityComponent implements OnInit {
 
   ngOnInit(): void {
     this.popularity = this.data.screens.filter((screen => screen.movieName == this.data.movie.name))
-    let timetable = {}
     for(var i of this.popularity){
       let day = new Date(i.date).getDate();
       let month = new Date(i.date).getMonth() + 1;
